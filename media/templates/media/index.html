@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+</head>
+{% if user.is_authenticated %}
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Homepage
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <a href="/books">View Books</a>
+                    </div>
+                </div>
+            </article>
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <a href="/movies">View Movies</a>
+                    </div>
+                </div>
+            </article>
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <a href="/otheritems">View Other Items</a>
+                    </div>
+                </div>
+            </article>
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <a href= "/view"> View your items</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <p><a href = "/logout">logout</a> </p>
+    </footer>
+</body>
+{% else %}
+    <p> Please Log in to continue <a href = "/login"> Here</a></p>
+{% endif %}
+
+</html>
